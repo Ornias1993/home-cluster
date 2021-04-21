@@ -12,7 +12,7 @@ autoinstall:
     - arches: [default]
       uri: http://ports.ubuntu.com/ubuntu-ports
   identity:
-    hostname: k8s-master-b
+    hostname: ProtC2
     # docker run --rm -it alpine:latest mkpasswd -m sha512 ubuntu
     # docker run --rm -it python:alpine3.12 python3 -c 'import crypt; print(crypt.crypt("ubuntu", crypt.mksalt(crypt.METHOD_SHA512)))'
     password: $6$xZ8azU7g$fVnTxKvgnzKnB0HXMsTvLHPuqXf6MbIN4IeGV5Qu/Eb6GtsKb7uSgfJUYY5SJR69ntdKxUuykyHZ5GpYO00oI1
