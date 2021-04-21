@@ -12,10 +12,10 @@ autoinstall:
     - arches: [default]
       uri: http://ports.ubuntu.com/ubuntu-ports
   identity:
-    hostname: ProtC2
+    hostname: ProtC3
     # docker run --rm -it alpine:latest mkpasswd -m sha512 ubuntu
     # docker run --rm -it python:alpine3.12 python3 -c 'import crypt; print(crypt.crypt("ubuntu", crypt.mksalt(crypt.METHOD_SHA512)))'
-    password: $6$xZ8azU7g$fVnTxKvgnzKnB0HXMsTvLHPuqXf6MbIN4IeGV5Qu/Eb6GtsKb7uSgfJUYY5SJR69ntdKxUuykyHZ5GpYO00oI1
+    password: $6$5DWjYR2a$TWe2vQsCdxIPX2a72asa2tZccbTs2HBHrLiInUXq6u1arTDUvOs5n/Ock9u2K/oyWsltZnFDTv6d5gm4aOPR61
     realname: Ubuntu
     username: ubuntu
   keyboard:
@@ -26,9 +26,9 @@ autoinstall:
   network:
     version: 2
     ethernets:
-      eno1:
+      eth0:
         addresses:
-        - 192.168.20.82/24
+        - 192.168.20.83/24
         critical: true
         dhcp-identifier: mac
         gateway4: 192.168.20.1
@@ -49,7 +49,7 @@ autoinstall:
     config:
     - id: root-disk-0
       type: disk
-      path: /dev/nvme0n1
+      path: /dev/sda
       wipe: superblock-recursive
       preserve: false
       grub_device: false
